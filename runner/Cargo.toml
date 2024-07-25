@@ -1,0 +1,11 @@
+[package]
+edition = "2021"
+name = "runner"
+version = "0.1.0"
+
+[dependencies]
+anyhow.workspace = true
+wasmtime-wasi.workspace = true
+wasmtime.workspace = true
+
+components-store.workspace = true

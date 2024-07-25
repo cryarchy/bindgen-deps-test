@@ -1,0 +1,25 @@
+[package]
+edition.workspace = true
+name = "base-component-1"
+version.workspace = true
+
+[dependencies]
+wit-bindgen-rt = {version = "0.28.0", features = ["bitflags"]}
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+debug = false
+lto = true
+opt-level = "s"
+strip = true
+
+[package.metadata.component]
+package = "component:base-component"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target]
+path = "../wit/deps/base-pkg/"

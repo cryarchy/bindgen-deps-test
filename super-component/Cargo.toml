@@ -1,0 +1,28 @@
+[package]
+edition.workspace = true
+name = "super-component"
+version.workspace = true
+
+[dependencies]
+wit-bindgen-rt = {version = "0.28.0", features = ["bitflags"]}
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+debug = false
+lto = true
+opt-level = "s"
+strip = true
+
+[package.metadata.component]
+package = "pkg:super-pkg"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target]
+path = "../wit/"
+
+[package.metadata.component.target.dependencies]
+"pkg:base-pkg" = {path = "../wit/deps/base-pkg/"}

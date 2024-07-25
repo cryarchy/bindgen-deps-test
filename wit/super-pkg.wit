@@ -1,0 +1,26 @@
+package pkg:super-pkg;
+
+interface ping-processor {
+    use types.{ping-request};
+
+    record process-ping-result {
+        processed-ping: string,
+    }
+
+    process-ping: func(input: string) -> process-ping-result;
+}
+
+interface base-pkg {
+    use types.{ping-request};
+
+    resource base-pkg-proxy {
+        constructor();
+        ping: func(request: ping-request) -> string;
+    }
+}
+
+world super-pkg-world {
+    import base-pkg;
+
+    export ping-processor;
+}

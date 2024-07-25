@@ -1,0 +1,12 @@
+package pkg:base-pkg;
+
+interface description {
+    use types.{ping-request};
+    
+    ping: func(request: ping-request) -> string;
+}
+
+world base-pkg-world {
+    export description;
+    export types;
+}

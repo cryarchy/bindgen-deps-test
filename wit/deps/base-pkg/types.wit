@@ -1,0 +1,6 @@
+interface types {
+    record ping-request {
+        component-name: string,
+        payload: string,
+    }
+}

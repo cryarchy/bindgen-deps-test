@@ -1,0 +1,15 @@
+[workspace]
+members = ["base-component-1", "base-component-2", "runner", "super-component", "components-store"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+wasmtime = "23.0"
+wasmtime-wasi = "23.0"
+
+components-store = {path = "components-store"}

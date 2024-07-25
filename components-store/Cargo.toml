@@ -1,0 +1,9 @@
+[package]
+edition.workspace = true
+name = "components-store"
+version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+thiserror.workspace = true
+wasmtime.workspace = true
