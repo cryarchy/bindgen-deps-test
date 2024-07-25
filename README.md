@@ -53,14 +53,14 @@ This project demonstrates a system where:
 To run the project:
 
 1. Clone the repository:
-   `git clone https://github.com/yourusername/bindgen-deps-test.git`
-   `cd bindgen-deps-test`
+    - `git clone https://github.com/yourusername/bindgen-deps-test.git`
+    - `cd bindgen-deps-test`
 2. Build the components:
-   `cargo component build --release --package base-component-1`
-   `cargo component build --release --package base-component-2`
-   `cargo component build --release --package super-component`
+    - `cargo component build --release --package base-component-1`
+    - `cargo component build --release --package base-component-2`
+    - `cargo component build --release --package super-component`
 3. Run the application:
-   `cargo run --bin runner`
+    - `cargo run --bin runner`
 
 ## Expected Output
 
