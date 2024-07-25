@@ -1,12 +1,19 @@
 package pkg:base-pkg;
 
+// This does legitimately seem to be broken
+// it should be able to live in another file in the same dir but that doesn't work
+interface types {
+  record ping-request {
+      payload: string,
+  }
+}
+
 interface description {
-    use types.{ping-request};
-    
-    ping: func(request: ping-request) -> string;
+  use types.{ping-request};
+  ping: func(request: ping-request) -> string;
 }
 
 world base-pkg-world {
-    export description;
-    export types;
-}
+  export description;
+}  
+ 

@@ -1,5 +1,0 @@
-interface types {
-    record ping-request {
-        payload: string,
-    }
-}
